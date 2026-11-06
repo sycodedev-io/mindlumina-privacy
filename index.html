@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>Datenschutzerklärung — MindLumina</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF7EE;
+    --paper-raised:#FFFFFF;
+    --ink:#241B36;
+    --ink-soft:#5E5572;
+    --ink-faint:#8D84A0;
+    --line:#E7DEC6;
+    --line-strong:#D8CBA6;
+    --accent:#8C6A17;
+    --accent-strong:#6E5110;
+    --accent-soft:#F1E4BC;
+    --ph-bg:#FCE4A3;
+    --ph-border:#B8860B;
+    --ph-ink:#5C4404;
+    --note-bg:#E7EEF7;
+    --note-border:#9FB7D6;
+    --note-ink:#2B4365;
+    --shadow: 0 1px 2px rgba(60,45,10,0.06), 0 8px 24px rgba(60,45,10,0.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#171026;
+      --paper-raised:#1E1730;
+      --ink:#F0E9FA;
+      --ink-soft:#BBAFD1;
+      --ink-faint:#8A7FA0;
+      --line:#352C4C;
+      --line-strong:#473A64;
+      --accent:#E3C067;
+      --accent-strong:#F1D488;
+      --accent-soft:#3A2F17;
+      --ph-bg:#4B3B12;
+      --ph-border:#C9A227;
+      --ph-ink:#FBE6A4;
+      --note-bg:#1B2537;
+      --note-border:#3C557C;
+      --note-ink:#C6D7EE;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 30px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#171026;
+    --paper-raised:#1E1730;
+    --ink:#F0E9FA;
+    --ink-soft:#BBAFD1;
+    --ink-faint:#8A7FA0;
+    --line:#352C4C;
+    --line-strong:#473A64;
+    --accent:#E3C067;
+    --accent-strong:#F1D488;
+    --accent-soft:#3A2F17;
+    --ph-bg:#4B3B12;
+    --ph-border:#C9A227;
+    --ph-ink:#FBE6A4;
+    --note-bg:#1B2537;
+    --note-border:#3C557C;
+    --note-ink:#C6D7EE;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 30px rgba(0,0,0,0.35);
+  }
+
+  *{box-sizing:border-box;}
+  html{text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+  a{color:var(--accent-strong);text-decoration-thickness:1px;}
+  a:hover{color:var(--accent);}
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline:2px solid var(--accent-strong);
+    outline-offset:2px;
+    border-radius:4px;
+  }
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- Masthead ---------- */
+  header.masthead{
+    border-bottom:1px solid var(--line);
+    padding:40px 0 32px;
+  }
+  .brandrow{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:28px;
+  }
+  .brandmark{width:22px;height:22px;flex:none;}
+  .brandname{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .brandname strong{color:var(--accent-strong);font-weight:500;}
+
+  h1.title{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:500;
+    font-size:clamp(34px,5vw,54px);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    margin:0 0 10px;
+    text-wrap:balance;
+  }
+  p.subtitle{
+    margin:0 0 24px;
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:46em;
+  }
+  .metarow{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 14px;
+    align-items:center;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:13px;
+  }
+  .metachip{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    padding:6px 12px;
+    border-radius:7px;
+    border:1px solid var(--line-strong);
+    background:var(--paper-raised);
+    color:var(--ink-soft);
+  }
+  .metachip.count{
+    border-color:var(--ph-border);
+    background:var(--ph-bg);
+    color:var(--ph-ink);
+    font-weight:500;
+  }
+
+  /* ---------- Placeholder marks ---------- */
+  mark.ph{
+    background:var(--ph-bg);
+    color:var(--ph-ink);
+    border:1px solid var(--ph-border);
+    border-radius:5px;
+    padding:1px 7px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:0.86em;
+    font-style:normal;
+    font-weight:500;
+    white-space:nowrap;
+    cursor:help;
+  }
+  mark.ph::before{
+    content:"✎ ";
+    opacity:0.75;
+  }
+
+  /* ---------- Internal note ---------- */
+  .devnote{
+    margin:28px 0 0;
+    padding:16px 18px;
+    border:1px solid var(--note-border);
+    background:var(--note-bg);
+    color:var(--note-ink);
+    border-radius:10px;
+    font-size:14.5px;
+    line-height:1.55;
+  }
+  .devnote b{font-weight:600;}
+  .devnote .tag{
+    display:inline-block;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    background:var(--note-border);
+    color:var(--paper-raised);
+    padding:2px 8px;
+    border-radius:5px;
+    margin-right:9px;
+    vertical-align:1px;
+  }
+
+  .legend{
+    margin:18px 0 0;
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    font-size:13.5px;
+    color:var(--ink-soft);
+  }
+  .legend mark.ph{flex:none;margin-top:1px;}
+
+  /* ---------- Body grid ---------- */
+  .body-grid{
+    display:grid;
+    grid-template-columns:230px minmax(0,720px);
+    gap:56px;
+    padding:44px 0 90px;
+    align-items:start;
+  }
+  @media (max-width:960px){
+    .body-grid{grid-template-columns:1fr;gap:28px;}
+    nav.toc{display:none;}
+  }
+
+  nav.toc{position:sticky;top:28px;}
+  nav.toc h2{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin:0 0 14px;
+  }
+  nav.toc ol{list-style:none;margin:0;padding:0;}
+  nav.toc li{margin:0 0 3px;}
+  nav.toc a{
+    display:flex;
+    gap:10px;
+    padding:6px 8px;
+    margin:0 -8px;
+    border-radius:6px;
+    color:var(--ink-soft);
+    text-decoration:none;
+    font-size:13.5px;
+    line-height:1.4;
+  }
+  nav.toc a:hover{background:var(--paper-raised);color:var(--ink);}
+  nav.toc a .n{
+    font-family:"IBM Plex Mono", monospace;
+    color:var(--ink-faint);
+    font-size:12px;
+    flex:none;
+    width:1.4em;
+  }
+
+  article p{margin:0 0 14px;max-width:38em;}
+  article p.lead{
+    font-size:17.5px;
+    color:var(--ink-soft);
+    max-width:42em;
+    margin-bottom:0;
+  }
+
+  section.sec{
+    padding-top:40px;
+    margin-top:40px;
+    border-top:1px solid var(--line);
+    scroll-margin-top:24px;
+  }
+  section.sec:first-of-type{border-top:none;padding-top:0;margin-top:44px;}
+
+  h2.sechead{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:500;
+    font-size:23px;
+    letter-spacing:-0.005em;
+    margin:0 0 16px;
+    text-wrap:balance;
+  }
+  h2.sechead .n{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:14px;
+    color:var(--accent-strong);
+    background:var(--accent-soft);
+    border-radius:6px;
+    padding:3px 8px;
+    flex:none;
+  }
+
+  h3.subhead{
+    font-family:"Public Sans", sans-serif;
+    font-weight:700;
+    font-size:14.5px;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    margin:22px 0 10px;
+  }
+
+  ul.cleanlist{margin:0 0 14px;padding-left:1.15em;max-width:38em;}
+  ul.cleanlist li{margin-bottom:6px;}
+  ul.cleanlist li::marker{color:var(--accent-strong);}
+
+  .addr-block{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:14px;
+    line-height:1.7;
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px 18px;
+    margin:14px 0 18px;
+    max-width:34em;
+  }
+  .addr-block div{margin-bottom:2px;}
+
+  .tablewrap{overflow-x:auto;margin:14px 0 20px;border:1px solid var(--line);border-radius:10px;}
+  table.datatable{
+    border-collapse:collapse;
+    width:100%;
+    min-width:620px;
+    font-size:14px;
+    background:var(--paper-raised);
+  }
+  table.datatable th,table.datatable td{
+    text-align:left;
+    padding:11px 14px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  table.datatable thead th{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    background:var(--accent-soft);
+  }
+  table.datatable tbody tr:last-child td{border-bottom:none;}
+  table.datatable tbody tr:nth-child(even){background: color-mix(in srgb, var(--paper) 55%, var(--paper-raised));}
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:26px 0 44px;
+    font-size:13px;
+    color:var(--ink-faint);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:10px;
+  }
+
+  @media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto !important;} }
+  html{scroll-behavior:smooth;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brandrow">
+      <svg class="brandmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="var(--accent)" stroke-width="1.4" stroke-dasharray="2.4 3.2"/>
+        <circle cx="12" cy="12" r="4.2" fill="var(--accent)"/>
+      </svg>
+      <span class="brandname"><strong>MindLumina</strong> · Rechtstexte</span>
+    </div>
+
+    <h1 class="title">Datenschutzerklärung</h1>
+    <p class="subtitle">Für die mobile App „MindLumina“ (vormals „Achtsamkeitskarten“) für iOS und Android.</p>
+
+    <div class="metarow">
+      <span class="metachip">Stand: 01.11.2026</span>
+      <span class="metachip">Geltungsbereich: App MindLumina (iOS &amp; Android)</span>
+      <span class="metachip count" id="phCount">… offene Platzhalter</span>
+    </div>
+
+    <div class="devnote">
+      <span class="tag">Interner Hinweis</span><b>Vor Veröffentlichung entfernen.</b>
+      Dieser Text ist ein Entwurf auf Basis der tatsächlichen App-Funktionen (Stand 2026‑11‑05: kein
+      Nutzerkonto, kein eigener Server, Datenhaltung ausschließlich lokal über AsyncStorage, lokale
+      Erinnerungen über <code>expo-notifications</code>, App-Updates über Expo/EAS Update). Er ersetzt
+      keine Rechtsberatung. Bitte vor dem Live-Schalten von einer Juristin/einem Juristen prüfen lassen —
+      insbesondere Abschnitt 7 (Datenübermittlung an Expo/EAS im Rahmen von App-Updates) und Abschnitt 14
+      (zuständige Aufsichtsbehörde).
+    </div>
+
+    <div class="legend">
+      <mark class="ph">Beispiel</mark>
+      <span>So sind alle Stellen markiert, die noch individuell ausgefüllt werden müssen — z.&nbsp;B. Unternehmensname, Anschrift, E-Mail-Adresse oder das Veröffentlichungsdatum. Vor dem Veröffentlichen bitte jede markierte Stelle ersetzen.</span>
+    </div>
+  </header>
+
+  <div class="body-grid">
+    <nav class="toc" aria-label="Inhaltsverzeichnis">
+      <h2>Inhalt</h2>
+      <ol>
+        <li><a href="#s1"><span class="n">01</span>Verantwortlicher</a></li>
+        <li><a href="#s2"><span class="n">02</span>Warum so wenig Daten</a></li>
+        <li><a href="#s3"><span class="n">03</span>Begriffe</a></li>
+        <li><a href="#s4"><span class="n">04</span>Rechtsgrundlagen</a></li>
+        <li><a href="#s5"><span class="n">05</span>Lokale Daten</a></li>
+        <li><a href="#s6"><span class="n">06</span>Benachrichtigungen</a></li>
+        <li><a href="#s7"><span class="n">07</span>App-Updates (Expo)</a></li>
+        <li><a href="#s8"><span class="n">08</span>App Stores</a></li>
+        <li><a href="#s9"><span class="n">09</span>Kein Tracking</a></li>
+        <li><a href="#s10"><span class="n">10</span>Minderjährige</a></li>
+        <li><a href="#s11"><span class="n">11</span>Datensicherheit</a></li>
+        <li><a href="#s12"><span class="n">12</span>Speicherdauer</a></li>
+        <li><a href="#s13"><span class="n">13</span>Deine Rechte</a></li>
+        <li><a href="#s14"><span class="n">14</span>Beschwerderecht</a></li>
+        <li><a href="#s15"><span class="n">15</span>Änderungen</a></li>
+        <li><a href="#s16"><span class="n">16</span>Kontakt</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <p class="lead">
+        MindLumina zeigt dir täglich eine Achtsamkeitskarte mit Affirmation und kurzer Übung. Die App
+        funktioniert bewusst ohne Nutzerkonto und ohne eigenen Server: Fast alle Daten, die beim Nutzen der
+        App entstehen, bleiben ausschließlich auf deinem Gerät. Diese Erklärung beschreibt im Detail, welche
+        Daten das sind, wofür sie gebraucht werden und welche Rechte dir zustehen.
+      </p>
+
+      <section class="sec" id="s1">
+        <h2 class="sechead"><span class="n">01</span>Verantwortlicher</h2>
+        <p>Verantwortlich für die Verarbeitung personenbezogener Daten im Zusammenhang mit dieser App im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+        <div class="addr-block">
+          <div>SyCodeDev — Emre Yilmaz</div>
+          <div>Brunnenstr. 12</div>
+          <div>89343 Jettingen-Scheppach</div>
+          <div>Deutschland</div>
+          <div>E-Mail: sycodedev@gmail.com</div>
+          <div>Telefon: 0176 64232672</div>
+        </div>
+        <p>Im Folgenden als „wir“ oder „Anbieter“ bezeichnet.</p>
+      </section>
+
+      <section class="sec" id="s2">
+        <h2 class="sechead"><span class="n">02</span>Warum diese App sehr datensparsam ist</h2>
+        <p>
+          MindLumina wurde bewusst ohne Nutzerkonto und ohne eigenen Anwendungs-Server entwickelt. Alle
+          Inhalte, die du in der App einstellst oder die beim Nutzen entstehen — etwa dein Name, deine
+          Favoriten oder dein Verlauf gezogener Karten — werden ausschließlich lokal auf deinem Gerät in
+          einem app-eigenen Speicherbereich abgelegt. Wir als Anbieter erhalten diese Daten nicht, können
+          nicht auf sie zugreifen und sie auch nicht für dich löschen. Die einzigen Ausnahmen sind technisch
+          notwendige Verbindungen beim App-Start zum Laden von App-Updates (Abschnitt 7) und die eigenständige
+          Datenverarbeitung durch den jeweiligen App-Store-Betreiber (Abschnitt 8).
+        </p>
+      </section>
+
+      <section class="sec" id="s3">
+        <h2 class="sechead"><span class="n">03</span>Begriffe</h2>
+        <p>
+          <strong>Personenbezogene Daten</strong> sind alle Informationen, die sich auf eine identifizierte
+          oder identifizierbare natürliche Person beziehen (Art. 4 Nr. 1 DSGVO). <strong>Verarbeitung</strong>
+          ist jeder Vorgang im Zusammenhang mit solchen Daten, zum Beispiel das Speichern, Auslesen oder
+          Löschen (Art. 4 Nr. 2 DSGVO).
+        </p>
+      </section>
+
+      <section class="sec" id="s4">
+        <h2 class="sechead"><span class="n">04</span>Rechtsgrundlagen der Verarbeitung</h2>
+        <p>Soweit im Rahmen der Nutzung der App personenbezogene Daten verarbeitet werden, stützen wir uns je nach Funktion auf:</p>
+        <ul class="cleanlist">
+          <li><strong>Art. 6 Abs. 1 lit. a DSGVO</strong> (Einwilligung) — z.&nbsp;B. für die freiwillige Eingabe deines Namens und für die Aktivierung von Erinnerungs-Benachrichtigungen.</li>
+          <li><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> — soweit eine Verarbeitung zur Bereitstellung der von dir gewünschten App-Funktion erforderlich ist.</li>
+          <li><strong>Art. 6 Abs. 1 lit. f DSGVO</strong> (berechtigtes Interesse) — für technisch notwendige Vorgänge, etwa das Laden von App-Updates.</li>
+        </ul>
+        <p>Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO), z.&nbsp;B. durch Deaktivieren der Benachrichtigungen in den Einstellungen.</p>
+      </section>
+
+      <section class="sec" id="s5">
+        <h2 class="sechead"><span class="n">05</span>Welche Daten die App verarbeitet — und wo</h2>
+        <h3 class="subhead">Lokal auf deinem Gerät gespeicherte Daten</h3>
+        <div class="tablewrap">
+          <table class="datatable">
+            <thead>
+              <tr><th>Datenart</th><th>Zweck</th><th>Grundlage</th><th>Löschbar über</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Name (optional)</td><td>Persönliche Begrüßung auf dem Startbildschirm</td><td>Einwilligung</td><td>Eingabe in den Einstellungen ändern/entfernen</td></tr>
+              <tr><td>Sprachauswahl</td><td>Anzeige der App-Texte in der gewählten Sprache</td><td>Berechtigtes Interesse</td><td>Einstellungen → Sprache</td></tr>
+              <tr><td>Darstellung (hell/dunkel/System)</td><td>Anzeige der App nach deiner Wahl</td><td>Berechtigtes Interesse</td><td>Einstellungen → Darstellung</td></tr>
+              <tr><td>Favoriten</td><td>Markierte Karten wiederfinden</td><td>Berechtigtes Interesse</td><td>Herz-Symbol erneut antippen</td></tr>
+              <tr><td>Verlauf gezogener Karten (inkl. Datum)</td><td>Anzeige des Verlaufs; Berechnung von Tage-Streak und Statistik</td><td>Berechtigtes Interesse</td><td>Einstellungen → „Statistik zurücksetzen“</td></tr>
+              <tr><td>Benachrichtigungs-Einstellung (an/aus, Uhrzeit oder Zufallsmodus)</td><td>Tägliche Erinnerung, sofern aktiviert</td><td>Einwilligung</td><td>Einstellungen → Benachrichtigungen deaktivieren</td></tr>
+              <tr><td>Onboarding-Status</td><td>Erkennen, ob die Einführung bereits gezeigt wurde</td><td>Berechtigtes Interesse</td><td>Nur durch Löschen des App-Speichers</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3 class="subhead">Übermittlung an uns oder Dritte</h3>
+        <p>
+          Die oben genannten Daten verlassen dein Gerät zu keinem Zeitpunkt. Es gibt keine Übertragung an
+          uns als Anbieter und keine Weitergabe an Dritte. Du kannst alle Angaben jederzeit selbst ändern
+          oder löschen — einzeln über die jeweilige Funktion in den Einstellungen, vollständig durch Löschen
+          des App-Speichers in den Systemeinstellungen deines Geräts oder durch Deinstallation der App.
+        </p>
+        <p>
+          Zur Bestimmung der Startsprache liest die App zusätzlich einmalig die Regions-/Spracheinstellung
+          deines Geräts aus (<code>expo-localization</code>). Auch das geschieht ausschließlich lokal auf dem
+          Gerät und wird nicht an uns übermittelt.
+        </p>
+      </section>
+
+      <section class="sec" id="s6">
+        <h2 class="sechead"><span class="n">06</span>Berechtigung: Benachrichtigungen</h2>
+        <p>
+          Aktivierst du die tägliche Erinnerung, fragt dich dein Betriebssystem (iOS/Android) um Erlaubnis,
+          der App das Senden lokaler Benachrichtigungen zu gestatten. Diese Benachrichtigungen werden
+          ausschließlich lokal auf deinem Gerät geplant und ausgelöst (<code>expo-notifications</code>) — es
+          werden keine Push-Nachrichten über einen Server verschickt und keine Benachrichtigungsinhalte an
+          uns oder Dritte übertragen. Du kannst die Erlaubnis jederzeit in den Systemeinstellungen deines
+          Geräts oder in den App-Einstellungen widerrufen.
+        </p>
+      </section>
+
+      <section class="sec" id="s7">
+        <h2 class="sechead"><span class="n">07</span>App-Updates über Expo / EAS Update</h2>
+        <p>
+          Damit wir dir Fehlerbehebungen und Inhaltsaktualisierungen zur Verfügung stellen können, ohne dass
+          du jedes Mal ein vollständiges Store-Update installieren musst, nutzt die App den Update-Dienst
+          „EAS Update“ des Drittanbieters Expo (Expo Technology Inc.). Beim Start der App wird dabei
+          automatisch im Hintergrund geprüft, ob eine aktualisierte Version vorliegt. Hierbei können
+          technische Daten wie App-Version, Betriebssystemversion, Geräteplattform und eine zufällige
+          Installationskennung an die Server von Expo übertragen werden.
+        </p>
+        <p>
+          <mark class="ph" title="Platzhalter — bitte prüfen und ergänzen">Angaben zu Expo als Auftragsverarbeiter / Drittlandtransfer (z.&nbsp;B. Standardvertragsklauseln) prüfen und hier ergänzen</mark>.
+          Weitere Informationen stellt Expo in seiner eigenen Datenschutzerklärung bereit:
+          <a href="https://expo.dev/privacy" target="_blank" rel="noopener">expo.dev/privacy</a>.
+          Diese Verarbeitung erfolgt auf Grundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f
+          DSGVO) an einer funktionsfähigen, aktuellen App.
+        </p>
+      </section>
+
+      <section class="sec" id="s8">
+        <h2 class="sechead"><span class="n">08</span>App Stores (Apple App Store / Google Play)</h2>
+        <p>
+          Beim Herunterladen, Installieren, Bezahlen (bei kostenpflichtigen Inhalten) oder Bewerten der App
+          über den Apple App Store bzw. Google Play verarbeitet der jeweilige Store-Betreiber eigenständig
+          personenbezogene Daten, etwa Account-, Zahlungs- und Gerätedaten. Diese Verarbeitung erfolgt in
+          eigener Verantwortung von Apple bzw. Google und liegt außerhalb unseres Einflussbereichs. Es
+          gelten die jeweiligen Datenschutzerklärungen:
+        </p>
+        <ul class="cleanlist">
+          <li>Apple: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></li>
+          <li>Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+        </ul>
+      </section>
+
+      <section class="sec" id="s9">
+        <h2 class="sechead"><span class="n">09</span>Keine Werbung, kein Tracking, keine Cookies</h2>
+        <p>
+          MindLumina enthält keine Werbung, keine Analyse- oder Tracking-Software (zum Beispiel kein Google
+          Analytics, kein Facebook-Pixel) und keine Cookies im klassischen Sinn, da es sich um eine native
+          App ohne eingebettete Webinhalte handelt. Es findet kein Profiling und keine automatisierte
+          Entscheidungsfindung im Sinne von Art. 22 DSGVO statt.
+        </p>
+      </section>
+
+      <section class="sec" id="s10">
+        <h2 class="sechead"><span class="n">10</span>Kinder und Jugendliche</h2>
+        <p>
+          Die App richtet sich nicht gezielt an Kinder unter 16 Jahren. Da sämtliche Angaben wie der
+          optionale Name freiwillig sind und ausschließlich lokal gespeichert werden, ist das Risiko für
+          Minderjährige gering. Eltern und Erziehungsberechtigte können entsprechende Angaben jederzeit
+          über die Geräteeinstellungen lokal löschen.
+        </p>
+      </section>
+
+      <section class="sec" id="s11">
+        <h2 class="sechead"><span class="n">11</span>Datensicherheit</h2>
+        <p>
+          Da alle in Abschnitt 5 genannten Daten lokal auf deinem Gerät verbleiben, hängt ihre Sicherheit
+          maßgeblich vom Schutz deines Geräts ab, etwa durch Bildschirmsperre und aktuelle
+          Betriebssystem-Updates. Für die Übertragung technischer Daten im Rahmen von App-Updates
+          (Abschnitt 7) wird eine verschlüsselte Verbindung (HTTPS/TLS) verwendet.
+        </p>
+      </section>
+
+      <section class="sec" id="s12">
+        <h2 class="sechead"><span class="n">12</span>Speicherdauer</h2>
+        <p>
+          Lokal gespeicherte Daten bleiben so lange auf deinem Gerät erhalten, bis du sie selbst löschst
+          (siehe Abschnitt 5) oder die App deinstallierst. Eine automatische Löschung durch uns findet nicht
+          statt, da wir keinen Zugriff auf diese Daten haben.
+        </p>
+      </section>
+
+      <section class="sec" id="s13">
+        <h2 class="sechead"><span class="n">13</span>Deine Rechte</h2>
+        <p>Dir stehen nach der DSGVO grundsätzlich folgende Rechte zu, soweit personenbezogene Daten von dir verarbeitet werden:</p>
+        <ul class="cleanlist">
+          <li>Auskunft (Art. 15 DSGVO)</li>
+          <li>Berichtigung (Art. 16 DSGVO)</li>
+          <li>Löschung (Art. 17 DSGVO)</li>
+          <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+          <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+          <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+          <li>Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
+        </ul>
+        <p>
+          Da die in Abschnitt 5 genannten Daten ausschließlich lokal auf deinem Gerät gespeichert werden und
+          für uns nicht zugänglich sind, kannst du die meisten dieser Rechte unmittelbar selbst ausüben —
+          durch Ändern, Zurücksetzen oder Löschen der entsprechenden Angaben in der App oder durch Löschen
+          des App-Speichers über die Systemeinstellungen deines Geräts. Für Anfragen, die darüber
+          hinausgehen, erreichst du uns über die in Abschnitt 1 genannten Kontaktdaten.
+        </p>
+      </section>
+
+      <section class="sec" id="s14">
+        <h2 class="sechead"><span class="n">14</span>Beschwerderecht bei einer Aufsichtsbehörde</h2>
+        <p>
+          Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, insbesondere in dem
+          Mitgliedstaat deines Aufenthaltsorts, deines Arbeitsplatzes oder des Orts des mutmaßlichen
+          Verstoßes. Die für uns zuständige Aufsichtsbehörde ist:
+        </p>
+        <div class="addr-block">
+          <div>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</div>
+          <div>Promenade 18</div>
+          <div>91522 Ansbach</div>
+          <div>Telefon: 0981 180093-0</div>
+          <div>E-Mail: poststelle@lda.bayern.de</div>
+        </div>
+      </section>
+
+      <section class="sec" id="s15">
+        <h2 class="sechead"><span class="n">15</span>Änderungen dieser Datenschutzerklärung</h2>
+        <p>
+          Wir passen diese Datenschutzerklärung an, wenn sich die App-Funktionen oder die zugrunde liegenden
+          rechtlichen Anforderungen ändern. Die jeweils aktuelle Fassung ist abrufbar unter:
+          <mark class="ph" title="Platzhalter — bitte ausfüllen">URL der veröffentlichten Datenschutzerklärung einsetzen</mark>.
+          Das Datum der letzten Änderung findest du oben auf dieser Seite.
+        </p>
+      </section>
+
+      <section class="sec" id="s16">
+        <h2 class="sechead"><span class="n">16</span>Kontakt</h2>
+        <p>
+          Fragen zu dieser Datenschutzerklärung oder zum Umgang mit deinen Daten richtest du bitte an:
+          sycodedev@gmail.com.
+        </p>
+      </section>
+    </article>
+  </div>
+
+  <footer>
+    <span>MindLumina — Vorlage für die Datenschutzerklärung, erstellt 2026‑11‑05.</span>
+    <span>Kein Ersatz für individuelle Rechtsberatung.</span>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('phCount').textContent =
+    document.querySelectorAll('mark.ph').length + ' offene Platzhalter';
+</script>
+
+</body>
+</html>
